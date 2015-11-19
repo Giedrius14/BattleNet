@@ -1,0 +1,60 @@
+
+.form {
+	padding: 10px;
+	border:1px dashed #0080ff;
+}
+
+.label{
+	text-align: right;
+	vertical-align: top;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+textarea {
+	background: white;
+	width: 250px;
+	height: 300px;
+	
+}
+/*
+input[type=text] {
+	width: 250px;
+	background: white;
+}
+
+input[type=password] {
+	width: 250px;
+	background: white;
+}
+.inputtext {
+	margin-left: 10px;
+}
+* 
+*/
+
+.error{
+	font-size: small;
+	color: red;
+	margin-left: 10px;
+}
+.valid{
+	font-size: small;
+	color: green;
+	margin-left: 10px;
+}
+div.header{
+	background-color: #ffe1aa;
+	
+}
+div.footer{
+	background-color: orange;
+}
+div.content{
+	text-align: center;
+}

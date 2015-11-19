@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="base.template" template="/templates/default.jsp">
+		<put-attribute name="title" value="Offers Homepage"></put-attribute>
+		<put-attribute name="header" value="/layouts/tiles/header.jsp"></put-attribute>
+		<put-attribute name="content" value="/layouts/tiles/content.jsp"></put-attribute>
+		<put-attribute name="footer" value="/layouts/tiles/footer.jsp"></put-attribute>
+	</definition>
+	
+		
+	<definition name="home" extends="base.template">
+		<put-attribute name="title" value=" Homepage"></put-attribute>
+		<put-attribute name="content" value="/layouts/jsp/home.jsp"></put-attribute>
+	</definition>
+		
+	<definition name="login" extends="base.template">
+		<put-attribute name="title" value="Current offer"></put-attribute>
+		<put-attribute name="content" value="/layouts/jsp/login.jsp"></put-attribute>
+	</definition>
+	<definition name="loggedout" extends="base.template">
+		<put-attribute name="title" value="Logged out"></put-attribute>
+		<put-attribute name="content" value="/layouts/jsp/loggedout.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="createacc" extends="base.template">
+		<put-attribute name="title" value="Create Account"></put-attribute>
+		<put-attribute name="content" value="/layouts/jsp/createacc.jsp"></put-attribute>
+	</definition>
+	<definition name="acccreated" extends="base.template">
+		<put-attribute name="title" value="Acc created"></put-attribute>
+		<put-attribute name="content" value="/layouts/jsp/acccreated.jsp"></put-attribute>
+	</definition>
+	
+	
+	<definition name="offers" extends="base.template">
+		<put-attribute name="title" value="Current offer"></put-attribute>
+		<put-attribute name="content" value="/layouts/jsp/offers.jsp"></put-attribute>
+	</definition>
+	<definition name="createoffer" extends="base.template">
+		<put-attribute name="title" value="Create offer"></put-attribute>
+		<put-attribute name="content" value="/layouts/jsp/createoffer.jsp"></put-attribute>
+	</definition>
+	<definition name="offercreated" extends="base.template">
+		<put-attribute name="title" value="Offer created"></put-attribute>
+		<put-attribute name="content" value="/layouts/jsp/offercreated.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="admin" extends="base.template">
+		<put-attribute name="title" value="Admin"></put-attribute>
+		<put-attribute name="content" value="/layouts/jsp/admin.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="denied" extends="base.template">
+		<put-attribute name="title" value="Denied Access"></put-attribute>
+		<put-attribute name="content" value="/layouts/jsp/denied.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="contactForm" extends="base.template">
+		<put-attribute name="title" value="Send Message"></put-attribute>
+		<put-attribute name="content" value="/layouts/jsp/contactForm.jsp"></put-attribute>
+	</definition>
+	<definition name="messageSent" extends="base.template">
+		<put-attribute name="title" value="Message Sent"></put-attribute>
+		<put-attribute name="content" value="/layouts/jsp/messageSent.jsp"></put-attribute>
+	</definition>
+	<definition name="messages" extends="base.template">
+		<put-attribute name="title" value="Messages"></put-attribute>
+		<put-attribute name="content" value="/layouts/jsp/messages.jsp"></put-attribute>
+	</definition>
+		<definition name="userprofile" extends="base.template">
+		<put-attribute name="title" value="UserProfile"></put-attribute>
+		<put-attribute name="content" value="/layouts/jsp/userprofile.jsp"></put-attribute>
+	</definition>
+		<definition name="fuelcalc" extends="base.template">
+		<put-attribute name="title" value="FuelCalculator"></put-attribute>
+		<put-attribute name="content" value="/layouts/jsp/fuelcalc.jsp"></put-attribute>
+	</definition>
+		<definition name="recipes" extends="base.template">
+		<put-attribute name="title" value="Recipes"></put-attribute>
+		<put-attribute name="content" value="/layouts/jsp/recipes.jsp"></put-attribute>
+	</definition>
+</tiles-definitions>
