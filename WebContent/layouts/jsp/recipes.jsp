@@ -140,7 +140,7 @@ function post(data){
 
 
 
-<div id ="createRecipe" class="container" hidden="true">
+<div id ="createRecipe" class="container" hidden="true" onkeyup="nullCheck()">
 <sf:form class="form" method="post" action="${pageContext.request.contextPath}/createrecipe" commandName="recipes">
     <div class="row">
         <div class="col-xs-12">
@@ -173,16 +173,31 @@ function post(data){
 		</table>
         </div>
         <div class="col-md-1">
-        	<a id="add_row" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-success"> <i
+        	<a id="add_row" onmouseup="$('#create').attr('disabled', 'disabled')" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-success"> <i
 			class="glyphicon glyphicon-plus"></i></a>
         </div>
     </div>
     <div class="row">
         <div class="col-xs-12">
 			<p>
-				<button type="submit" name="create" value="Create" class="btn btn-default" onclick="$('#callbackrequest').submit()">Create</button>
+				<button id="create" disabled="disabled" type="submit" name="create" value="Create" class="btn btn-default" onclick="$('#callbackrequest').submit()">Create</button>
 			</p>
 		</div>
     </div>
     </sf:form>
 </div>
+<script>
+function nullCheck(){
+        var empty = false;
+        $('form :input').each(function() {
+            if ($(this).val() == '') {
+                empty = true;
+            }
+        });
+        if (empty) {
+            $('#create').attr('disabled', 'disabled');
+        } else {
+            $('#create').removeAttr('disabled');
+        }
+}
+</script>
