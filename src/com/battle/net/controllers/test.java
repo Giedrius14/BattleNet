@@ -1,5 +1,5 @@
 package com.battle.net.controllers;
-
+/*
 class Machine{
 	private String name;
 	private int code;
@@ -38,3 +38,4 @@ public class test {
 	}
 
 }
+*/

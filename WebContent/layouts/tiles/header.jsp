@@ -5,7 +5,7 @@
 
 <nav class="navbar navbar-default" role="navigation">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="<c:url value='/'/>">Skelbimai / Home</a>
+		<a class="navbar-brand" href="<c:url value='/'/>">Home</a>
 	</div>
 	<div>
 		<ul class="nav navbar-nav">
@@ -13,12 +13,12 @@
 					<a href="${pageContext.request.contextPath}/admin">Admin page</a>
 				</sec:authorize></li>
 			<li><a href="${pageContext.request.contextPath}/recipes">Receptai</a></li>
-			<li><a href="${pageContext.request.contextPath}/fuelcalc">Fuel Calculator</a></li>
+		<!--	<li><a href="${pageContext.request.contextPath}/fuelcalc">Fuel Calculator</a></li>  -->
 		</ul>
 
 		<ul class="nav navbar-nav pull-right">
-			<li><sec:authorize access="isAuthenticated()">
-					<a href="<c:url value="/messages"/>" onmouseover="getMessages()"> Messages (<SPAN id="numberMessages">0</SPAN>)
+			<li><sec:authorize access="isAuthenticated()" >
+					<a href="<c:url value="/messages"/>"> Messages (<SPAN id="numberMessages">0</SPAN>)
 					</a>
 				</sec:authorize></li>
 			<li><sec:authorize access="isAuthenticated()">
@@ -35,3 +35,18 @@
 	</div>
 
 </nav>
+<!-- Kad nebutu redirekto i JSON -->
+<sec:authorize access="isAuthenticated()">  
+ <script>
+ getMessages();
+//$(document).ready(function(){
+   
+//});
+window.onload = myFunction();
+function myFunction() {
+    setInterval(function(){ 
+	getMessages();
+	    }, 10000);
+}
+</script>
+</sec:authorize>

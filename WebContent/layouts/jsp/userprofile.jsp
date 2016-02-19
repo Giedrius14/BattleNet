@@ -2,7 +2,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form"%>
 
-User profile
+<H3>User profile</H3>
 
 <div class="container">
 	<div class="row">
@@ -14,7 +14,8 @@ User profile
 				<div class="panel-body">
 					<div class="row">
 						<div class="col-md-3 col-lg-3 " align="center">
-							<img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive">
+							<img alt="User Pic" src="http://us.123rf.com/450wm/kritchanut/kritchanut1401/kritchanut140100056/25251052-businessman-avatar-with-question-mark-on-his-head.jpg" class="img-circle img-responsive">
+						<!-- src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" -->
 						</div>
 						<div class=" col-md-9 col-lg-9 ">
 							<table class="table table-user-information">
@@ -29,7 +30,7 @@ User profile
 									</tr>
 									<tr>
 										<td>Date of Birth</td>
-										<td>01/24/1988</td>
+										<td>01/13/1991</td>
 									</tr>
 
 									<tr>
@@ -39,15 +40,15 @@ User profile
 									</tr>
 									<tr>
 										<td>Home Address</td>
-										<td>Metro Manila,Philippines</td>
+										<td>Kaunas,Lithuania</td>
 									</tr>
 									<tr>
 										<td>Email</td>
-										<td><a href="mailto:info@support.com">info@support.com</a></td>
+										<td><a href="mailto:info@support.com">email</a></td>
 									</tr>
 									<td>Phone Number</td>
-									<td>123-4567-890(Landline)<br>
-									<br>555-4567-890(Mobile)
+									<td>
+									555-4567-890(Mobile)
 									</td>
 									</tr>
 								</tbody>

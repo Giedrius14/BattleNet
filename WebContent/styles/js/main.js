@@ -14,13 +14,13 @@ function validatePass() {
   var password2 = $("#confirmPassword").val();
 
     if(password1 == password2) {
-       $("#passwordError").text("Password's match");  
-       $("#passwordError").removeClass("alert alert-danger pull-left")
-       $("#passwordError").addClass("alert alert-success pull-left");
+       $("#passwordError").text("Password's match") 
+       .removeClass("alert alert-danger pull-left")
+       .addClass("alert alert-success pull-left");
     }
     else {   	
-        $("#passwordError").text("Password's dont match !");
-        $("#passwordError").addClass("alert alert-danger pull-left");
+        $("#passwordError").text("Password's dont match !")
+        .addClass("alert alert-danger pull-left");
     } 
 }
 
@@ -77,7 +77,7 @@ $.ajax({
 });
 }*/
 function getMessages(){
-		type: 'GET',
+    		type: 'GET',
 		$.ajax({url: "/offers/getmessages",
 		dataType: 'json',
 		contentType: 'application/json',
@@ -94,8 +94,13 @@ function updateMessageLink(data) {
 function success(){
 	alert("success");
 }
-function error(){
+function successData(){
+	alert("success" + data);
+}
+function error(e){
 	alert("error");
+	console.log("ERROR: ", e);
+	display(e);
 }
 function cancelMSG(div){
 	$("#replyMessage").val("")
@@ -143,7 +148,6 @@ function getJSON(){
             	        buttons: {
             	            "Yes": function () {
             	            	var id=result.id;
-                    	    	
                 	    		$.ajax({
                 	    			type: 'POST',
                 	    			url: "/offers/deletemsg",
@@ -152,51 +156,38 @@ function getJSON(){
                 	    			dataType:'json' ,
                 	    			success: location.reload() 
                 	    		});
-            	            	
             	                $(this).dialog('close');
             	                callback(true);
             	            },
-            	                "No": function () {
+            	            "No": function () {
             	                $(this).dialog('close');
             	                callback(false);
             	            }
             	        }
             	    });
-            	       });
-            	
+            	  });
             	button.click(function() {  
     					$("#name").val(result.name);
     					$("#email").val(result.email);
     					$( "#new_message" ).dialog( "open" );
-    				
     				});
     				   $( "#new_message" ).dialog({
     					      autoOpen: false,
     					      modal: true,
-    					      show: {
-    					        effect: "blind",
-    					        duration: 500
-    					      },
-    					      hide: {
-    					        effect: "explode",
-    					        duration: 500
-    					      }
+    					      show: { effect: "blind", duration: 500 },
+    					      hide: { effect: "explode", duration: 500 }
     					    });
             	var tr=$('<tr/>');
             	var td
             	for (i in result) {
-            		td= $('<td/>');
-            		 if(i==="username"){
-            	  //  td.append(result[i]);
-            	   // if(i==="username"){
-            	    	 td.append(button);	
-            	    	 td.append(button2);//    button.appendTo(td);    appentTo   ideti i tapcia Cell
-            		 	}else{ 
-            		 		td.append(result[i]);
-            		 	}
+            		td= $('<td/>');		
+            		if(i==="username"){
+            	    	  td.append(button).append(button2);//    button.appendTo(td);    appentTo   ideti i tapcia Cell
+            		 }else{ 
+            		   td.append(result[i]);
+            		 }
             	    tr.append(td);
             	}       
-            	
             	 $("#message").append(tr);
             });
         };

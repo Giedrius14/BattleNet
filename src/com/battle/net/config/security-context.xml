@@ -19,6 +19,7 @@
 
 	<security:http use-expressions="true">
 	<!--	<security:intercept-url pattern="/admin" access="permitAll" />-->	
+		<security:intercept-url pattern="/admin/table" access="hasRole('ROLE_ADMIN')" />
 		<security:intercept-url pattern="/admin" access="hasRole('ROLE_ADMIN')" />
 		<security:intercept-url pattern="/createoffer" access="isAuthenticated()" />
 		<security:intercept-url pattern="/messages" access="isAuthenticated()" />
@@ -30,6 +31,7 @@
 		<security:intercept-url pattern="/offercreated" access="isAuthenticated()" />
 		<security:intercept-url pattern="/" access="permitAll" />
 		
+		<security:intercept-url pattern="/openrecipes" access="permitAll" />
 		<security:intercept-url pattern="/createrecipe" access="isAuthenticated()" />
 		<security:intercept-url pattern="/recipes" access="permitAll" />
 		<security:intercept-url pattern="/calculate" access="permitAll" />

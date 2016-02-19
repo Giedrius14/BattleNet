@@ -8,7 +8,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,7 +58,7 @@ public class LoginController {
 			return "messages";
 		}
 		
-		@RequestMapping("/admin")
+/*		@RequestMapping("/admin")
 		public String showAdmin(Model model){
 			
 			List<User> users=usersService.getAllUsers();
@@ -67,7 +66,7 @@ public class LoginController {
 			model.addAttribute("user", users);
 			return "admin";
 		}
-		
+		*/
 		@RequestMapping("/loggedout")
 		public String showLoggedOut(){
 			return "loggedout";
@@ -105,7 +104,7 @@ public class LoginController {
 		
 		@RequestMapping(value="/getmessages", method= RequestMethod.GET, produces="application/json")
 		@ResponseBody
-		public Map<String, Object> getMessages(Principal principal, HttpServletResponse response) throws IOException{
+		public Map<String, Object> getMessages(Principal principal) throws IOException{
 			List<Message> messages = null;
 			
 			if(principal==null){

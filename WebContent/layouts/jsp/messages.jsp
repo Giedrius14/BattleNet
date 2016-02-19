@@ -3,19 +3,20 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="sec"
 	uri="http://www.springframework.org/security/tags"%>
-messages
-
+	
+	
+<H3>Messages</H3>
 <div id="messages" class="form">
 
-	<table id="message" class="table table-striped">
-		<tr>
+	<table id="message" class="table table-striped" style="background-color:white">
+		<thead style="background-color:#D2EAF6">
 			<th class="col-sm-1">id</th>
 			<th class="col-sm-2">subject</th>
 			<th class="col-sm-2">content</th>
 			<th class="col-sm-2">name</th>
 			<th class="col-sm-2">email</th>
 			<th class="col-sm-2"></th>
-		</tr>
+		</thead>
 	</table>
 </div>
 

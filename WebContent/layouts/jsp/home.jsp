@@ -16,8 +16,8 @@
 
 </c:choose>
 
-<table class="table table-striped table-hover">
-	<tr>
+<table class="table table-striped table-hover"  style="background-color:white">
+	<tr style="background-color:#D2EAF6">
 		<th class="col-sm-1" >Name</th>
 		<th class="col-sm-1">Email</th>
 		<th class="col-sm-3">Offer</th>
@@ -33,7 +33,3 @@
 		</tr>
 	</c:forEach>
 </table>
-
-<script type="text/javascript">
-	getMessages();
-</script>

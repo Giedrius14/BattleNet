@@ -12,7 +12,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.battle.net.dao.Calculation;
 import com.battle.net.dao.Offer;
 import com.battle.net.service.OffersService;
 @Controller
